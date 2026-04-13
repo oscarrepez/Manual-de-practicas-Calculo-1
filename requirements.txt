@@ -1,0 +1,6 @@
+mystmd
+jupyter
+numpy
+matplotlib
+sympy
+pandas
