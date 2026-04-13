@@ -1,14 +1,11 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
+
 project:
   title: Manual de programación - Cálculo 1
 
 site:
   title: Manual de programación - Cálculo 1
-
-launch:
-  binder: true
-  colab: true
+  template: book-theme
 
 parse:
   myst_enable_extensions:
