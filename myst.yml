@@ -6,6 +6,10 @@ project:
 site:
   title: Manual de programación - Cálculo 1
 
+launch:
+  binder: true
+  colab: true
+
 parse:
   myst_enable_extensions:
     - amsmath
