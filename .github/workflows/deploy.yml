@@ -31,21 +31,21 @@ jobs:
         run: |
           pip install mystmd jupyter
 
-      - name: Build site
-        run: myst build
+      - name: Build static HTML
+        run: myst build --html
 
       - name: Show build output
         run: |
           pwd
           ls
           ls _build || true
-          ls _build/site || true
-          test -f _build/site/index.html && echo "index exists" || echo "index missing"
+          ls _build/html || true
+          test -f _build/html/index.html && echo "index exists" || echo "index missing"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/site
+          path: _build/html
 
   deploy:
     needs: build
