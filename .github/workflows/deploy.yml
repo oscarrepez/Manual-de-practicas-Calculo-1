@@ -3,7 +3,6 @@ name: Deploy MyST site
 on:
   push:
     branches: [main]
-<<<<<<< HEAD
   workflow_dispatch:
 
 permissions:
@@ -14,18 +13,12 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: true
-=======
-
-permissions:
-  contents: write
->>>>>>> 730a9e2 (Corrijo ruta de GitHub Actions)
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -46,7 +39,8 @@ jobs:
           pwd
           ls
           ls _build || true
-          ls _build/html || true
+          ls _build/site || true
+          test -f _build/site/index.html && echo "index exists" || echo "index missing"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -64,23 +58,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-=======
-    - uses: actions/checkout@v3
-
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.11
-
-    - name: Install MyST
-      run: pip install mystmd
-
-    - name: Build site
-      run: myst build
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _build/html
->>>>>>> 730a9e2 (Corrijo ruta de GitHub Actions)
