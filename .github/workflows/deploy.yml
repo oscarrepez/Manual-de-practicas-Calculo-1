@@ -40,13 +40,12 @@ jobs:
           ls
           ls _build || true
           ls _build/site || true
-          ls _build/site/public || true
-          test -f _build/site/public/index.html && echo "index exists" || echo "index missing"
+          test -f _build/site/index.html && echo "index exists" || echo "index missing"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/site/public
+          path: _build/site
 
   deploy:
     needs: build
