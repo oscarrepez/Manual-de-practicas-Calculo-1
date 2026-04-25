@@ -1,0 +1,69 @@
+Traceback (most recent call last):
+  File "/home/jfhlewyee/anaconda3/envs/jb/lib/python3.13/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/jfhlewyee/anaconda3/envs/jb/lib/python3.13/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/jfhlewyee/anaconda3/envs/jb/lib/python3.13/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/jfhlewyee/anaconda3/envs/jb/lib/python3.13/asyncio/base_events.py", line 720, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/jfhlewyee/anaconda3/envs/jb/lib/python3.13/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/home/jfhlewyee/anaconda3/envs/jb/lib/python3.13/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/jfhlewyee/anaconda3/envs/jb/lib/python3.13/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import struct
+
+def mostrar_representacion_flotante(x):
+    # Empaquetar el número como flotante de 64 bits
+    packed_x = struct.pack('>d', x)
+    # Convertir a un entero de 64 bits para ver los bits
+    int_rep = int.from_bytes(packed_x, byteorder='big')
+    # Convertir a binario
+    binario_flotante = bin(int_rep)[2:].zfill(64)
+    return binario_flotante
+
+numero_real = float(input("Ingresa un número real en su expresión decimal: "))
+binario_flotante = mostrar_representacion_flotante(numero_real)
+print(f"El número {numero_real} en binario (IEEE 754, 64 bits) es:\n{binario_flotante}")
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+Cell [0;32mIn[2], line 12[0m
+[1;32m      9[0m     binario_flotante [38;5;241m=[39m [38;5;28mbin[39m(int_rep)[[38;5;241m2[39m:][38;5;241m.[39mzfill([38;5;241m64[39m)
+[1;32m     10[0m     [38;5;28;01mreturn[39;00m binario_flotante
+[0;32m---> 12[0m numero_real [38;5;241m=[39m [38;5;28mfloat[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mIngresa un número real en su expresión decimal: [39;49m[38;5;124;43m"[39;49m[43m)[49m)
+[1;32m     13[0m binario_flotante [38;5;241m=[39m mostrar_representacion_flotante(numero_real)
+[1;32m     14[0m [38;5;28mprint[39m([38;5;124mf[39m[38;5;124m"[39m[38;5;124mEl número [39m[38;5;132;01m{[39;00mnumero_real[38;5;132;01m}[39;00m[38;5;124m en binario (IEEE 754, 64 bits) es:[39m[38;5;130;01m\n[39;00m[38;5;132;01m{[39;00mbinario_flotante[38;5;132;01m}[39;00m[38;5;124m"[39m)
+
+File [0;32m~/anaconda3/envs/jb/lib/python3.13/site-packages/ipykernel/kernelbase.py:1281[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
+[1;32m   1279[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
+[1;32m   1280[0m     msg [38;5;241m=[39m [38;5;124m"[39m[38;5;124mraw_input was called, but this frontend does not support input requests.[39m[38;5;124m"[39m
+[0;32m-> 1281[0m     [38;5;28;01mraise[39;00m StdinNotImplementedError(msg)
+[1;32m   1282[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_input_request(
+[1;32m   1283[0m     [38;5;28mstr[39m(prompt),
+[1;32m   1284[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_ident[[38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m],
+[1;32m   1285[0m     [38;5;28mself[39m[38;5;241m.[39mget_parent([38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m),
+[1;32m   1286[0m     password[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[1;32m   1287[0m )
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+

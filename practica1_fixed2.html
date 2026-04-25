@@ -1,0 +1,1733 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3. Uso del condicional if. &#8212; Practicas Cálculo 1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practica1_fixed2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="2. Tutorial Avanzado" href="Tutorial-Avanzado.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Practicas Cálculo 1</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    La Química Cuántica a tu alcance
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Basico.html">1. Tutorial Básico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Avanzado.html">2. Tutorial Avanzado</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas Sencillos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/oscarrepez/Practicas-Calculo-1/master?urlpath=tree/practica1_fixed2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/oscarrepez/Practicas-Calculo-1/blob/master/practica1_fixed2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/practica1_fixed2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Uso del condicional if.</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4. Representación de Números Reales en Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.1. Convertir un número real en un número flotante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">4.2. Operaciones con flotantes.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python">4.3. Práctica 1.1. Uso de Números de Punto Flotante en Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-campo-de-los-numeros-reales">4.4. Propiedades de campo de los números reales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-2-los-numeros-flotantes-son-un-campo">4.5. Práctica 1.2. ¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numero-reales">4.6. Propiedades de orden de los número reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">4.7. Valor absoluto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">4.8. Valor absoluto de la diferencia de dos números reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-3-distancia-entre-dos-numeros-reales">4.9. Práctica 1.3. Distancia entre dos números reales.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">5. Funciones en Python.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">5.1. 2. Iterar sobre una lista de números.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">5.2. 3. Ejecutar código repetidamente.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">5.3. 4. Iterar sobre una cadena de texto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">5.4. 5. Sumar números de una lista</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sucesiones">6. Sucesiones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.1. Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">6.2. Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2.1. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">6.3. Límite de una sucesión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">6.4. Práctica 3.2</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="uso-del-condicional-if">
+<h1><span class="section-number">3. </span>Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.<a class="headerlink" href="#uso-del-condicional-if" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="representacion-de-numeros-reales-en-python">
+<h1><span class="section-number">4. </span>Representación de Números Reales en Python<a class="headerlink" href="#representacion-de-numeros-reales-en-python" title="Link to this heading">#</a></h1>
+<p>Los números que la computadora puede representar, en particular usando el lenguaje de Python, es limitada comparada con la cardinalidad del conjunto de números reales. Por ejemplo, la representación exacta del número  <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> requiere que almacenemos una cantidad infinita de números decimales, lo mismo que los números <span class="math notranslate nohighlight">\(\frac{1}{3}= 0.\bar{3}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{7}= 0.\overline{142857}\)</span>, etc.</p>
+<p>El número de bits en donde la computadora almacena información, en particular un número real, es limitado y fijo para una computadora dada. Para poder almacenar el rango más grande posible de números dado un número fijo de bits, se utilizan números de  <em><strong>punto flotante</strong></em>  (también llamados <em>flotantes</em>). En casi todas las plataformas en donde se utiliza Pyhton, los flotantes se almacenan con doble precisión (IEEE754), esto quiere decir que se designan un total de 64 bits para almacenar cada uno de ellos. Los números de punto flotante son una aproximación computacional a los números reales.</p>
+<p>Un número flotante asigna una cantidad fija de bits a tres partes distintas de un número real:</p>
+<ol class="arabic simple">
+<li><p>El <strong>signo</strong>, llamado <span class="math notranslate nohighlight">\(s\)</span>, indica si es un número positivo o negativo, éste se almacena en 1 bit.</p></li>
+<li><p>Un exponente o <strong>característica</strong>, llamado <span class="math notranslate nohighlight">\(e\)</span>, es una  potencia de 2, el cual se almacena en 11 bits.</p></li>
+<li><p>La fracción o <strong>mantisa</strong> <span class="math notranslate nohighlight">\(f\)</span> es el coeficiente del exponente y se almacena en 52 bits.</p></li>
+</ol>
+<p>Con esta información, un número flotante se representa de la siguiente forma:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
+\end{equation*}\]</div>
+<p>En Python, la información de un número flotante se obtiene usando el paquete <code class="docutils literal notranslate"><span class="pre">sys</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">float_info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="convertir-un-numero-real-en-un-numero-flotante">
+<h2><span class="section-number">4.1. </span>Convertir un número real en un número flotante<a class="headerlink" href="#convertir-un-numero-real-en-un-numero-flotante" title="Link to this heading">#</a></h2>
+<p>Convertir un número real a uno flotante (IEEE754) para su almacenamiento en la computadora consiste en determinar los elementos: signo (<span class="math notranslate nohighlight">\(s\)</span>), exponente (<span class="math notranslate nohighlight">\(e\)</span>) y fracción (<span class="math notranslate nohighlight">\(f\)</span>) para su represnetación en la forma expresada en la sección anterior. A continuación se describe, con un ejemplo, el algoritmo que permite determinar estos elementos:</p>
+<p><em>Cálculo de <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(e\)</span> y <span class="math notranslate nohighlight">\(f\)</span> para el número <span class="math notranslate nohighlight">\(5.75\)</span>.</em></p>
+<ol class="arabic simple">
+<li><p>Determinar el signo.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Si es número es positivo el bit que almacena el signo es 0.</p></li>
+<li><p>Si es número es negativo el bit es 1.</p></li>
+</ul>
+<p><em>El número <span class="math notranslate nohighlight">\(5.75\)</span> es positivo por lo que <span class="math notranslate nohighlight">\(s=1\)</span>.</em></p>
+<ol class="arabic simple" start="2">
+<li><p>Convertir el número a binario.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Si el número tiene una parte entera, convertirla a binario.</p></li>
+<li><p>Si el número tiene una parte fraccionaria, multiplícarlo por 2 repetidamente y extraer el binario de la parte entera resultante (sólo puede ser 0 o 1) hasta conseguir la precisión deseada o hasta que el número se reduzca a cero.</p></li>
+</ul>
+<p><em>El número <span class="math notranslate nohighlight">\(5.75\)</span> tiene como parte entera <span class="math notranslate nohighlight">\(5\)</span> y parte farcccionaria  <span class="math notranslate nohighlight">\(0.75\)</span>.</em>
+<em>El número <span class="math notranslate nohighlight">\(5\)</span> en binario es: <span class="math notranslate nohighlight">\(101\)</span></em>
+<em>El número 0.75 se convierte a binario multiplicando por 2:</em></p>
+<p><span class="math notranslate nohighlight">\(0.75 \times 2 = 1.5\)</span></p>
+<p><span class="math notranslate nohighlight">\(0.5  \times 2 = 1.0\)</span></p>
+<p><em>Por lo que el número <span class="math notranslate nohighlight">\(0.75\)</span> en binario es <span class="math notranslate nohighlight">\(0.11\)</span>.</em></p>
+<p><strong>Conclusión:</strong> <em>El número <span class="math notranslate nohighlight">\(5.75\)</span> en binario es <span class="math notranslate nohighlight">\(101.11\)</span></em></p>
+<ol class="arabic simple" start="3">
+<li><p>Normalizar el número.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Escribir el número en notación científica binaria:
+<span class="math notranslate nohighlight">\(1.(mantisa) \times 2^{exponente}\)</span>.</p></li>
+<li><p>Mover el punto decimal de la representación binaria hasta que haya un solo bit 1 a la izquierda del punto. Contar cuántos lugares se movió el punto (ese es el exponente) y ajusta el número de bits después del punto (esa es la mantisa).</p></li>
+</ul>
+<p><em>El número <span class="math notranslate nohighlight">\(101.11\)</span> se convierte en <span class="math notranslate nohighlight">\(1.0111\times 2^{2}\)</span></em></p>
+<p><em>Como el punto decimal se movió dos lugares, el exponente es <span class="math notranslate nohighlight">\(2\)</span> y la mantisa es <span class="math notranslate nohighlight">\(0111\)</span></em></p>
+<ol class="arabic simple" start="4">
+<li><p>Calcular el exponente con sesgo.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Puesto que el exponente se almacena en 11 bits, el sesgo es de 1023, esto quiere decir que el exponente que se almacena en binario está dado por:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(e = \textit{exponente real} + 1023\)</span></p>
+<p>*Convertir el exponente ajustado al sego en representación binaria de 11 bits.</p>
+<ul class="simple">
+<li><p>Si la representación binaria no ocupa 11 bits, se rellena con ceros.</p></li>
+</ul>
+<p><em>El exponente real del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(2\)</span>, por lo que el exponente segado está dado por:</em></p>
+<p><span class="math notranslate nohighlight">\(e= 2+1023=1025\)</span></p>
+<p><em>El número <span class="math notranslate nohighlight">\(1025\)</span> en binario es <span class="math notranslate nohighlight">\(10000000001\)</span>. Como ocupa 11 bits no es necesario completar con ceros.</em></p>
+<ol class="arabic simple" start="5">
+<li><p>Obtener la fracción o mantisa.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Tomar la parte fraccionaria de la representaciónn binaria normalizada, es decir lo que queda después del punto decimal y ajustar la mantisa para completar 52 bits. Si son menos, rellenar con ceros.</p></li>
+</ul>
+<p><em>La parte fraccionaria del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(0111\)</span> por lo que la mantisa con 52 bits es:</em></p>
+<p><span class="math notranslate nohighlight">\(0111000000000000000000000000000000000000000000000000\)</span></p>
+<ol class="arabic simple" start="6">
+<li><p>La representación final consiste de 64 bits distribuídos de la siguiente forma:</p></li>
+</ol>
+<p>INSERTAR IMAGEN</p>
+<p><em>La representación del número 5.75 es:</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+0 &amp;  &amp; 10000000001 &amp; 0111000000000\\
+  &amp;  &amp;             &amp; 0000000000000\\
+  &amp;  &amp;             &amp; 0000000000000\\
+  &amp;  &amp;             &amp; 0000000000000
+\end{aligned}
+\end{split}\]</div>
+<p>Ejemplo:</p>
+<p>Con el siguiente código se calcula la representación del número 5.75</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mostrar_representacion_flotante</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># Empaquetar el número como flotante de 64 bits</span>
+    <span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="c1"># Convertir a un entero de 64 bits para ver los bits</span>
+    <span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
+    <span class="c1"># Convertir a binario</span>
+    <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binario_flotante</span>
+
+<span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real en su expresión decimal: &quot;</span><span class="p">))</span>
+<span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">mostrar_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="k">return</span> <span class="n">binario_flotante</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real en su expresión decimal: &quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">mostrar_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/anaconda3/envs/jb/lib/python3.13/site-packages/ipykernel/kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="operaciones-con-flotantes">
+<h2><span class="section-number">4.2. </span>Operaciones con flotantes.<a class="headerlink" href="#operaciones-con-flotantes" title="Link to this heading">#</a></h2>
+<p>Podemos realizar las siguientes operaciones aritméticas con Python</p>
+<ol class="arabic simple">
+<li><p>Suma</p></li>
+<li><p>Resta</p></li>
+<li><p>Multiplicación</p></li>
+<li><p>División</p></li>
+<li><p>Potencias(reales)</p></li>
+</ol>
+<p>El siguiente código pide al usuario dos números reales, los almacena como un flotante y realiza las operaciones de suma, resta, multiplicación, división y los eleva a una potencia.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">division</span>
+
+<span class="c1">#Entrada de dos números reales</span>
+<span class="n">numero_1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real: &quot;</span> <span class="p">))</span>
+<span class="n">numero_2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa otro número real: &quot;</span> <span class="p">))</span>
+
+<span class="c1">#Suma de los números</span>
+<span class="n">suma</span> <span class="o">=</span> <span class="n">numero_1</span><span class="o">+</span><span class="n">numero_2</span>
+
+<span class="c1">#Resta de los números</span>
+<span class="n">resta</span> <span class="o">=</span> <span class="n">numero_1</span><span class="o">-</span><span class="n">numero_2</span>
+
+<span class="c1">#Producto de dos números</span>
+<span class="n">multiplicacion</span> <span class="o">=</span> <span class="n">numero_1</span><span class="o">*</span><span class="n">numero_2</span>
+
+<span class="c1">#División de dos números</span>
+<span class="n">division</span> <span class="o">=</span>  <span class="n">numero_1</span><span class="o">/</span><span class="n">numero_2</span>
+
+<span class="c1">#Potencia</span>
+<span class="n">potencia</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">numero_1</span><span class="p">,</span><span class="n">numero_2</span><span class="p">)</span>
+
+<span class="c1">#Impresión de resultados de las operaciones</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la suma:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">suma</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la resta:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">resta</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la multipliación:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">multiplicacion</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la división:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">division</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la potencia:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">potencia</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real: 1.4
+Ingresa otro número real: 2.4
+El resultado de la suma:  1.4 + 2.4 = 3.8
+El resultado de la resta:  1.4 - 2.4 = -1.0
+El resultado de la multipliación:  1.4 * 2.4 = 3.36
+El resultado de la división:  1.4 / 2.4 = 0.5833333333333334
+El resultado de la potencia:  1.4 ^ 2.4 = 2.2423700574830967
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="practica-1-1-uso-de-numeros-de-punto-flotante-en-python">
+<h2><span class="section-number">4.3. </span>Práctica 1.1. Uso de Números de Punto Flotante en Python.<a class="headerlink" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo:</strong> Que el estudiante comprenda cómo los números reales se operan en Python, cómo se representan, almacenan y los errores que pueden surgir debido a las limitaciones de la representación de números flotantes en binario.</p>
+<p>Un ejemplo clásico de errores que surgen por la rerpesentación de números reales en el estándar IEEE754 es la representación de los números <span class="math notranslate nohighlight">\(0.1\)</span> y el número <span class="math notranslate nohighlight">\(0.2\)</span>, entre otros.</p>
+<p><strong>Actividades</strong></p>
+<ol class="arabic simple">
+<li><p>De acuerdo al algoritmo presentado, obtén la representación de los números: <span class="math notranslate nohighlight">\(1.5\)</span>, <span class="math notranslate nohighlight">\(2.3\)</span>, <span class="math notranslate nohighlight">\(4.5\)</span>, <span class="math notranslate nohighlight">\(3.0\)</span>, <span class="math notranslate nohighlight">\(0.1\)</span> y <span class="math notranslate nohighlight">\(0.2\)</span> en el formato de punto flotante. Observa que algunos de estos números no pueden ser representados de forma exacta con <span class="math notranslate nohighlight">\(64\)</span> bits.</p></li>
+<li><p>Utiliza el programa proporcionado que emplea el módulo <code class="docutils literal notranslate"><span class="pre">struct</span></code> para comparar tu resultado.</p></li>
+<li><p>Escribe una celda de código en donde se realicen las siguientes operaciones:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(0.1+0.2\)</span></p>
+<p><span class="math notranslate nohighlight">\(1.5-1.1\)</span></p>
+<p><span class="math notranslate nohighlight">\(2.3\times 4.5\)</span></p>
+<p>De acuerdo a la aritmética tradicional, ¿Por qué ocurren errores en las operaciones realizadas con Python?</p>
+<ol class="arabic simple" start="4">
+<li><p>El siguiente código compara dos números flotantes, modifícalo y ejecútalo para comparar el resultado aritmético de las operaciones realizadas en el ejercicio 3 con el resultado numérico de dichas operaciones con Python.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculo_representacion_flotante</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># Empaquetar el número como flotante de 64 bits</span>
+    <span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="c1"># Convertir a un entero de 64 bits para ver los bits</span>
+    <span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
+    <span class="c1"># Convertir a binario</span>
+    <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binario_flotante</span>
+
+<span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real en su expresión decimal: &quot;</span><span class="p">))</span>
+<span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real en su expresión decimal: 0.1
+El número 0.1 en binario (IEEE 754, 64 bits) es:
+0011111110111001100110011001100110011001100110011001100110011010
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Actividad 3</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La suma de </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">+</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La resta de </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> menos </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">c</span><span class="o">-</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mf">2.3</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">4.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El producto de </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> por </span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">e</span><span class="o">*</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La suma de 0.1+0.2 es igual a 0.30000000000000004
+La resta de 1.5 menos 1.1 es igual a 0.3999999999999999
+El producto de 2.3 por 4.5 es igual a 10.35
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 4</span>
+<span class="n">resultado_numerico_1</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">0.2</span>
+<span class="n">resultado_aritmético_1</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="k">if</span> <span class="n">resultado_numerico_1</span> <span class="o">==</span> <span class="n">resultado_aritmético_1</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_1</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">resultado_numerico_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_1</span><span class="si">}</span><span class="s2"> no es igual a </span><span class="si">{</span><span class="n">resultado_numerico_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">resultado_numerico_2</span> <span class="o">=</span> <span class="mf">1.5</span><span class="o">-</span><span class="mf">1.1</span>
+<span class="n">resultado_aritmético_2</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="k">if</span> <span class="n">resultado_numerico_2</span> <span class="o">==</span> <span class="n">resultado_aritmético_2</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_2</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">resultado_numerico_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_2</span><span class="si">}</span><span class="s2"> no es igual a </span><span class="si">{</span><span class="n">resultado_numerico_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">resultado_numerico_3</span> <span class="o">=</span> <span class="mf">2.3</span><span class="o">*</span><span class="mf">4.5</span>
+<span class="n">resultado_aritmético_3</span> <span class="o">=</span> <span class="mf">10.35</span>
+<span class="k">if</span> <span class="n">resultado_numerico_3</span> <span class="o">==</span> <span class="n">resultado_aritmético_3</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_3</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">resultado_numerico_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_3</span><span class="si">}</span><span class="s2"> no es igual a </span><span class="si">{</span><span class="n">resultado_numerico_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3 no es igual a 0.30000000000000004
+0.4 no es igual a 0.3999999999999999
+10.35 es igual a 10.35
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="propiedades-de-campo-de-los-numeros-reales">
+<h2><span class="section-number">4.4. </span>Propiedades de campo de los números reales<a class="headerlink" href="#propiedades-de-campo-de-los-numeros-reales" title="Link to this heading">#</a></h2>
+<p>Los números reales cumplen con las siguientes propiedades de campo :</p>
+<ul class="simple">
+<li><p><strong>Cerradura</strong> de la suma y del producto:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(a+b \in \mathbb{R}\)</span></p>
+<p><span class="math notranslate nohighlight">\(a\cdot b \in \mathbb{R}\)</span></p>
+<ul class="simple">
+<li><p><strong>Conmutatividad</strong> de la suma y del producto:</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(a+b = b+a\)</span></p>
+<p><span class="math notranslate nohighlight">\(a\cdot b =b \cdot a\)</span></p>
+<ul class="simple">
+<li><p><strong>Asociatividad</strong> de la  suma y del producto:</p></li>
+</ul>
+<p>Para cualesquiera tres números <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> <span class="math notranslate nohighlight">\(\in \mathbb{R}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\((a+b) + c = a+(b+c)\)</span></p>
+<p><span class="math notranslate nohighlight">\((a\cdot b) \cdot c = a \cdot (b \cdot c)\)</span></p>
+<ul class="simple">
+<li><p><strong>Existencia del número inverso</strong> para la operación de suma y para la operación de producto, los cuales se obtienen como:</p></li>
+</ul>
+<p>Para cualquier número <span class="math notranslate nohighlight">\(a \in {\mathbb R}\)</span>, <span class="math notranslate nohighlight">\(-a\)</span> es el inverso de la suma</p>
+<p>Para cualquier número <span class="math notranslate nohighlight">\(a \in {\mathbb R}\)</span> distinto de <span class="math notranslate nohighlight">\(0\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{a}\)</span> es el inverso del producto.</p>
+<ul class="simple">
+<li><p><strong>Existencia de un número neutro</strong> para la suma y un número neutro para el producto, en el caso de la suma el neutro es <span class="math notranslate nohighlight">\(0\)</span> y en el caso del producto el neutro es <span class="math notranslate nohighlight">\(1\)</span>, éstos cumplen que:</p></li>
+</ul>
+<p>Para cualquier número <span class="math notranslate nohighlight">\(a \in {\mathbb R}\)</span>, <span class="math notranslate nohighlight">\(a+0=a\)</span></p>
+<p>Para cualquier número <span class="math notranslate nohighlight">\(a \in {\mathbb R}\)</span>, <span class="math notranslate nohighlight">\(a*1=a\)</span></p>
+<ul class="simple">
+<li><p><strong>Distributividad</strong> de la operaciones de suma y producto.</p></li>
+</ul>
+<p>Para cualesquiera tres números <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> <span class="math notranslate nohighlight">\(\in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(a\cdot(b+c)=a\cdot b + a\cdot b\)</span></p>
+</section>
+<section id="practica-1-2-los-numeros-flotantes-son-un-campo">
+<h2><span class="section-number">4.5. </span>Práctica 1.2. ¿Los números flotantes son un campo?<a class="headerlink" href="#practica-1-2-los-numeros-flotantes-son-un-campo" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo:</strong> Que el estudiante comprenda las propiedades de campo que cumplen los números reales y cuáles sí y cuáles no cumplen los números de punto flotante en Python.</p>
+<p><strong>Actividad</strong></p>
+<p>Utiliza los códigos de Python que te permitan responder las siguientes preguntas:</p>
+<ol class="arabic simple">
+<li><p>¿La propiedad de cerradura en la suma y el producto se cumple para cualesquiera dos números flotantes?</p></li>
+<li><p>¿La propiedad de conmutatividad en la suma y el producto se cumpln para cualesquiera dos números flotantes?</p></li>
+<li><p>¿La propiedad de asociatividad en la suma y el producto se cumple en los números flotantes?</p></li>
+<li><p>¿Para cada número flotante existen los neutros en la suma y el producto,  y son números flotantes?</p></li>
+<li><p>¿Para cada número flotante existen los inversos en la suma y el producto, y son números flotantes?</p></li>
+<li><p>¿Para cualesquiera tres números flotantes se cumple la propiedad de distributividad?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Actividad cero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculo_representacion_flotante</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># Empaquetar el número como flotante de 64 bits</span>
+    <span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="c1"># Convertir a un entero de 64 bits para ver los bits</span>
+    <span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
+    <span class="c1"># Convertir a binario</span>
+    <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">binario_flotante</span>
+
+<span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real en su expresión decimal: &quot;</span><span class="p">))</span>
+<span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 1</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real a en expresión decimal b: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real b en expresión decimal a: &quot;</span><span class="p">))</span>
+<span class="n">suma</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="n">producto</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
+
+<span class="n">a_f</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">b_f</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">suma_f</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">suma</span><span class="p">)</span>
+<span class="n">producto_f</span> <span class="o">=</span><span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">producto</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">suma</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">producto</span><span class="p">))</span>
+
+
+<span class="k">if</span> <span class="n">a_f</span><span class="o">+</span><span class="n">b_f</span> <span class="o">==</span> <span class="n">suma_f</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes es un número flotante&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes no es un número flotante&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">a_f</span><span class="o">*</span><span class="n">b_f</span> <span class="o">==</span> <span class="n">producto_f</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes es un número flotante&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes no es un número flotante&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 2</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real a en expresión decimal a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real b en expresión decimal b: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="o">==</span> <span class="n">b</span><span class="o">+</span><span class="n">a</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de dos números flotantes es conmutativa&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de dos números flotantes NO es conmutativa&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El producto de dos números flotantes es conmutativo&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El producto de dos números flotantes NO es conmutativo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 1
+Ingresa un número real b en expresión decimal b: 6
+La suma de dos números flotantes es conmutativa
+El producto de dos números flotantes es conmutativo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 3</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real a en expresión decimal a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real b en expresión decimal b: &quot;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real c en expresión decimal c: &quot;</span><span class="p">))</span>
+<span class="n">suma</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span>
+<span class="n">producto</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">c</span>
+
+<span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="n">c</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de tres números flotantes es asociativa&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de tres números flotantes NO es asociativa&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">c</span><span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El producto de tres números flotantes es asociativa&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El producto de tres números flotantes NO es asociativo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 1
+Ingresa un número real b en expresión decimal b: 3
+Ingresa un número real c en expresión decimal c: 7
+La suma de tres números flotantes es asociativa
+El producto de tres números flotantes es asociativa
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 4</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real a en expresión decimal a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real b distinto de cero en expresión decimal b: &quot;</span><span class="p">))</span>
+
+<span class="n">inverso_suma</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inverso_suma</span><span class="p">)</span>
+<span class="n">reciproco_producto</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">reciproco_producto</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">inverso_suma</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El inverso del número </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> es un número flotante&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El inverso del número </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> NO es un número flotante&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">b</span><span class="o">*</span><span class="n">reciproco_producto</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El recíproco del número </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> es un número flotante&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El recíproco del número </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> NO es un número flotante&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 4
+Ingresa un número real b distinto de cero en expresión decimal b: 3
+-4.0
+1.0
+El inverso del número 4.0 es un número flotante
+El recíproco del número 3.0 es un número flotante
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 5</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real a en expresión decimal a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real b en expresión decimal b: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="mi">0</span> <span class="o">==</span> <span class="n">a</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El neutro de la suma es un número flotante&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El neutro de la suma NO es un número flotante&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">b</span><span class="o">*</span><span class="mi">1</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El neutro de la suma es un número flotante&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El neutro de la suma NO es un número flotante&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 2.3
+Ingresa un número real b en expresión decimal b: 5.0
+El neutro de la suma es un número flotante
+El neutro de la suma es un número flotante
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 6</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real a en expresión decimal a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real b en expresión decimal b: &quot;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real b en expresión decimal c: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Los números flotantes cumplen la propiedad distributiva&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Los números flotantes NO cumplen la propiedad distributiva&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 3.4
+Ingresa un número real b en expresión decimal b: 5.6
+Ingresa un número real b en expresión decimal c: 1.2
+Los números flotantes cumplen la propiedad distributiva
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="propiedades-de-orden-de-los-numero-reales">
+<h2><span class="section-number">4.6. </span>Propiedades de orden de los número reales.<a class="headerlink" href="#propiedades-de-orden-de-los-numero-reales" title="Link to this heading">#</a></h2>
+<p>Los números reales cumplen con las siguientes propiedades de orden:</p>
+<p>Para cuales quiera dos números reales, <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> se sólo se cumple cualquiera de las tres afirmaciones siguientes:</p>
+<p><span class="math notranslate nohighlight">\(a&lt;b\)</span>, <span class="math notranslate nohighlight">\(a&gt;b\)</span>, ó <span class="math notranslate nohighlight">\(a=b\)</span></p>
+<p>Python puede determinar el ordeon de dos números reales, es decir, determinar el valor de verdad de afirmaciones que involucren propiedades de orden. En la siguiente de celde de código se comparan dos números:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce un número real a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce un número real b: &quot;</span><span class="p">))</span>
+
+<span class="n">a</span><span class="o">&lt;</span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Introduce un número real a: 3
+Introduce un número real b: 6
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dado el valor de verdad de una afirmación, podemos hacer un código usando la estructura de <code class="docutils literal notranslate"><span class="pre">if</span></code> que comparE dos números reales:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce un número real a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce un número real b: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> es menor que </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> es mayor que </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> es igual que </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Introduce un número real a: 1.2
+Introduce un número real b: 1.2
+El número 1.2 es igual que 1.2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="valor-absoluto">
+<h2><span class="section-number">4.7. </span>Valor absoluto<a class="headerlink" href="#valor-absoluto" title="Link to this heading">#</a></h2>
+<p>El valor absoluto de un número real es siempre un número positivo que geométricamente nos da la distancia de dicho número real al origen, se define como:</p>
+<p><span class="math notranslate nohighlight">\(
+|x| = \left\{
+  \begin{array}{lcc}
+  -x &amp; si &amp; x &lt; 0 \\
+  x &amp; si &amp; x\geq 0 \\
+      \end{array} \right.
+\)</span></p>
+<p>Para calcular el valor absoluto de un un número real, ocupamos la función <code class="docutils literal notranslate"><span class="pre">abs()</span></code>. El siguiente código evalúa el valor absoluto de un núemero real.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real: &quot;</span><span class="p">))</span>
+
+<span class="n">valor_absoluto</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor absoluto del número real </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> es: </span><span class="si">{</span><span class="n">valor_absoluto</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real: -4.7
+El valor absoluto del número real -4.7 es: 4.7
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="valor-absoluto-de-la-diferencia-de-dos-numeros-reales">
+<h2><span class="section-number">4.8. </span>Valor absoluto de la diferencia de dos números reales.<a class="headerlink" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales" title="Link to this heading">#</a></h2>
+<p>Dados dos números reales, <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>, ocurre que</p>
+<p><span class="math notranslate nohighlight">\(
+|a-b|=|b-a|
+\)</span>
+y además, <span class="math notranslate nohighlight">\(|a-b|\)</span> resulta ser igual a la distancia en la recta real que hay entre los números <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p>El siguiente código permite graficar dos números en la recta real y calcular el valor absluto de la diferencia entre éstos. Observa que el valor absoluto de la resta es precisamente la distancia entre ambos números.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">graficar_numeros_en_recta_real</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># Crear una figura y un eje</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+    <span class="c1"># Graficar los números en la recta real</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">a</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;r-o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;b-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;b = </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Configuración de la recta real</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Recta Real&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Etiquetas para los números</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Distancia: |a-b|</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;|</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">-(</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">)|= </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Rango de la gráfica en el eje x</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Título y leyenda</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Representación de Números en la Recta Real&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># Mostrar la gráfica</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Ingresar los números directamente en lugar de utilizar input()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe un número a: &quot;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe un número b: &quot;</span><span class="p">))</span>
+
+<span class="n">graficar_numeros_en_recta_real</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escribe un número a: -3
+Escribe un número b: -6
+</pre></div>
+</div>
+<img alt="_images/67cbe9efd08a49520061def565913d2a088b2024ef5734ba3656a36157b1fd44.png" src="_images/67cbe9efd08a49520061def565913d2a088b2024ef5734ba3656a36157b1fd44.png" />
+</div>
+</div>
+</section>
+<section id="practica-1-3-distancia-entre-dos-numeros-reales">
+<h2><span class="section-number">4.9. </span>Práctica 1.3. Distancia entre dos números reales.<a class="headerlink" href="#practica-1-3-distancia-entre-dos-numeros-reales" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo:</strong> Que el estudiante comprenda las propiedades de campo que cumplen los números reales y cuáles sí y cuáles no cumplen los números de punto flotante en Python.</p>
+<p><strong>Actividad</strong></p>
+<p>Utiliza los códigos de Python que te permitan responder las siguientes preguntas:</p>
+<ol class="arabic simple">
+<li><p>¿La propiedad de cerradura en la suma y el producto se cumple para cualesquiera dos números flotantes?</p></li>
+<li><p>¿La propiedad de conmutatividad en la suma y el producto se cumpln para cualesquiera dos números flotantes?</p></li>
+<li><p>¿La propiedad de asociatividad en la suma y el producto se cumple en los números flotantes?</p></li>
+<li><p>¿Para cada número flotante existen los neutros en la suma y el producto,  y son números flotantes?</p></li>
+<li><p>¿Para cada número flotante existen los inversos en la suma y el producto, y son números flotantes?</p></li>
+<li><p>¿Para cualesquiera tres números flotantes se cumple la propiedad de distributividad?</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="funciones-en-python">
+<h1><span class="section-number">5. </span>Funciones en Python.<a class="headerlink" href="#funciones-en-python" title="Link to this heading">#</a></h1>
+<p>Una función de variable real es una relación entre dos conjuntos, en la cual a cada número real (del dominio de la función) se le asigna exactamente un número real (del codominio). Formalmente, una función de variable real se puede expresar como:</p>
+<p><span class="math notranslate nohighlight">\(f: \mathbb D \subset \mathbb R \longmapsto \mathbb  R\)</span></p>
+<p>Donde <span class="math notranslate nohighlight">\(\mathbb D\)</span> es un subconjunto de los números reales y la función f asigna a cada número real <span class="math notranslate nohighlight">\(x\)</span> del conjunto <span class="math notranslate nohighlight">\(\mathbb D\)</span> a un solo valor real, denominado <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p>Es muy importante recorda que las funciones de variale real se expresan algebraicamente por medio una fórmula, la cual expresa la regla de correspondencia.</p>
+<p>La representación gráfica de funiciones es muy importante y en Python esto se realiza</p>
+<p>#El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>El ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> en python se utiliza para hacer una iteración sobre una secuencia de elementos, los cuales pueden ser una lista, una tupla, un diccionario, un conjunto o una cadena de texto. Se utiliza en programación para ejecutar líneas de código de forma repetida, una por nada elemento de la lista.</p>
+<p>La sintáxis es la siguiente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">secuencia</span><span class="p">:</span>
+  <span class="c1">#Lineas de código a ejecutar</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">for</span></code> es la palabra que indica el inicio del ciclio de iteración.</p></li>
+<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">variable</span></code> es el nombre de la variable que tomará el valor de cada uno de los elementos de la secuencia en cada iteración. Puede ser nombrada de cualquier forma pero lo recomendable es que se le asigne un nombre que denote el tipo de datos sobre los que se está iterando.</p></li>
+<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">in</span></code> indica que la variable tomará el valor de cada elemento en la secuencia.</p></li>
+<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">secuencia</span></code> es la estructura de datos sobre la que se va a iterar. Puede ser uan lista, una tupla, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:</span></code> (dos puntos) indican el final de la declaración del ciclo y el inicio de las líneas que se ejecutarán.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Líneas</span> <span class="pre">de</span> <span class="pre">código</span> <span class="pre">a</span> <span class="pre">ejecutar</span></code> es el conjunto de líneas de código que se ejecutarán de forma repetida, una vez por cada elemento de la secuencia.  Es importante notar que estas líneas de código deben estar escritas de forma identada, con un número fijo de espacio o un tabulador.</p></li>
+</ul>
+<p>Veamos algunos ejemplos.</p>
+<p>##Ejemplos de uso:</p>
+<p>###1. Iterar sobre una lista.</p>
+<p>En el siguiente código se ha declado la lista</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;azul&#39;</span><span class="p">,</span> <span class="s1">&#39;amarillo&#39;</span><span class="p">,</span> <span class="s1">&#39;rojo&#39;</span><span class="p">,</span> <span class="s1">&#39;verde&#39;</span><span class="p">,</span> <span class="s1">&#39;anaranjado&#39;</span><span class="p">,</span> <span class="s1">&#39;rosa&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Ejecuta la celda de código y observa qué ocurre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;azul&#39;</span><span class="p">,</span> <span class="s1">&#39;amarillo&#39;</span><span class="p">,</span> <span class="s1">&#39;rojo&#39;</span><span class="p">,</span> <span class="s1">&#39;verde&#39;</span><span class="p">,</span> <span class="s1">&#39;anaranjado&#39;</span><span class="p">,</span> <span class="s1">&#39;rosa&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colores</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>azul
+amarillo
+rojo
+verde
+anaranjado
+rosa
+</pre></div>
+</div>
+</div>
+</div>
+<section id="iterar-sobre-una-lista-de-numeros">
+<h2><span class="section-number">5.1. </span>2. Iterar sobre una lista de números.<a class="headerlink" href="#iterar-sobre-una-lista-de-numeros" title="Link to this heading">#</a></h2>
+<p>En el siguiente código se ha declarado la lista</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Ejecuta la celda de código y observa qué ocurre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
+  <span class="n">numero_par</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">numero</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">numero_par</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+6
+8
+10
+12
+16
+20
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ejecutar-codigo-repetidamente">
+<h2><span class="section-number">5.2. </span>3. Ejecutar código repetidamente.<a class="headerlink" href="#ejecutar-codigo-repetidamente" title="Link to this heading">#</a></h2>
+<p>Si sólo se desea ejecutar líneas de código de forma repetida, podemos usar</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">paso</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> es el número donde comienza la secuencia. Si no se especifica, comienza en <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> es el número que indica que termina la secuencia y no se incluye, es decir, la secuancia termina en <span class="math notranslate nohighlight">\(n-1\)</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paso</span></code> es el incremento entre cada número de la secuencia.</p></li>
+</ul>
+<p>Ejecuta las siguientes celdas de código y observa qué ocurre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5 x&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hola 1
+Hola 4
+Hola 7
+Hola 10
+Hola 13
+Hola 16
+Hola 19
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterar-sobre-una-cadena-de-texto">
+<h2><span class="section-number">5.3. </span>4. Iterar sobre una cadena de texto<a class="headerlink" href="#iterar-sobre-una-cadena-de-texto" title="Link to this heading">#</a></h2>
+<p>En el siguiente código se ha declarado una cadena de caracteres:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cadena</span><span class="o">=</span><span class="s2">&quot;HolaMundo&quot;</span>
+</pre></div>
+</div>
+<p>Ejecuta la celda de código y observa qué ocurre.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cadena</span><span class="o">=</span><span class="s2">&quot;HolaMundo&quot;</span>
+<span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">cadena</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H
+o
+l
+a
+M
+u
+n
+d
+o
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sumar-numeros-de-una-lista">
+<h2><span class="section-number">5.4. </span>5. Sumar números de una lista<a class="headerlink" href="#sumar-numeros-de-una-lista" title="Link to this heading">#</a></h2>
+<p>En el siguiente código se ha declarado la lista de números:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>se ha declarado la variable suma, con valor 0</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">suma</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>Ejecuta el siguiente código y observa cómo con el ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> podemos sumar los números en la lista.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
+<span class="n">suma</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">lista_numeros</span><span class="p">:</span>
+  <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span><span class="o">+</span><span class="n">n</span> <span class="c1">#se puede abreviar suma=+n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>63
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sucesiones">
+<h1><span class="section-number">6. </span>Sucesiones<a class="headerlink" href="#sucesiones" title="Link to this heading">#</a></h1>
+<p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> es una función cuyo dominio es el conjunto de números naturales  <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> y el contradominio es el conjunto de números reales <span class="math notranslate nohighlight">\(\mathbb R\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+S_n: \mathbb N \longmapsto \mathbb D \subset R
+\end{equation*}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+S_n=f(n)
+\end{equation*}
+\]</div>
+<p>Por ejemplo:</p>
+<p>\begin{aligned}
+S_n      &amp; = \frac{1}{n}\
+\alpha_n &amp; = n\
+\beta_n  &amp; = (-1)^{n}\
+\gamma_n &amp; = 2n
+\end{aligned}</p>
+<p>##Cálculo de los términos de una sucesión.</p>
+<p>Para calcular los términos de una sucesión podemos utilizar el ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>En la siguiente celda de código se calculan los términos se la sucesión <span class="math notranslate nohighlight">\(S_n=\frac{1}{n}\)</span> para valores de <span class="math notranslate nohighlight">\(n\leq20\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+  <span class="n">Sn</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Para&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s2">&quot;el valor de Sn=1/n es:&quot;</span><span class="p">,</span><span class="n">Sn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Para 1 el valor de Sn=1/n es: 1.0
+Para 2 el valor de Sn=1/n es: 0.5
+Para 3 el valor de Sn=1/n es: 0.3333333333333333
+Para 4 el valor de Sn=1/n es: 0.25
+Para 5 el valor de Sn=1/n es: 0.2
+Para 6 el valor de Sn=1/n es: 0.16666666666666666
+Para 7 el valor de Sn=1/n es: 0.14285714285714285
+Para 8 el valor de Sn=1/n es: 0.125
+Para 9 el valor de Sn=1/n es: 0.1111111111111111
+Para 10 el valor de Sn=1/n es: 0.1
+Para 11 el valor de Sn=1/n es: 0.09090909090909091
+Para 12 el valor de Sn=1/n es: 0.08333333333333333
+Para 13 el valor de Sn=1/n es: 0.07692307692307693
+Para 14 el valor de Sn=1/n es: 0.07142857142857142
+Para 15 el valor de Sn=1/n es: 0.06666666666666667
+Para 16 el valor de Sn=1/n es: 0.0625
+Para 17 el valor de Sn=1/n es: 0.058823529411764705
+Para 18 el valor de Sn=1/n es: 0.05555555555555555
+Para 19 el valor de Sn=1/n es: 0.05263157894736842
+Para 20 el valor de Sn=1/n es: 0.05
+</pre></div>
+</div>
+</div>
+</div>
+<section id="ejercicios">
+<h2><span class="section-number">6.1. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<p>Escribe códigos que evalúen los términos de las siguientes sucesiones:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \alpha_n =1+\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \beta_n  = (-1)^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \gamma_n = \sin\Big(13+\frac{1}{n^2}\Big)\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \delta_n=\frac{1}{n^2}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \theta_n=\frac{n}{n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq15\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S_n=\frac{n+3}{n^3+4}\)</span>, con <span class="math notranslate nohighlight">\(n\leq25\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle R_n=\frac{n!}{n^n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle M_n=\frac{2n}{3n^2+2n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle Q_n=3n^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle W_n=\frac{3^n+(-1)^n}{3^{n+1}+(-1)^{n+1}}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+</ol>
+</section>
+<section id="graficas-de-sucesiones">
+<h2><span class="section-number">6.2. </span>Gráficas de Sucesiones<a class="headerlink" href="#graficas-de-sucesiones" title="Link to this heading">#</a></h2>
+<p>Al igual que para una función, podemos trazar la gráfica de una suceción.</p>
+<p>En el siguiente ejemplo se calculan los términos de la sucesión <span class="math notranslate nohighlight">\(S_n=\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n \leq 20\)</span> y se grafica la función.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Declaración de las listas donde se almacenarán los valores de la Sucesión</span>
+<span class="n">Sn</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">n</span> <span class="o">=</span><span class="p">[]</span>
+
+<span class="c1"># Ciclo for para el cáculo de cada término k desde 1 hasta 20</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+  <span class="n">Sn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">k</span><span class="p">)</span>
+  <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Sn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">Sn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.0, 0.5, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666, 0.14285714285714285, 0.125, 0.1111111111111111, 0.1, 0.09090909090909091, 0.08333333333333333, 0.07692307692307693, 0.07142857142857142, 0.06666666666666667, 0.0625, 0.058823529411764705, 0.05555555555555555, 0.05263157894736842, 0.05]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+</pre></div>
+</div>
+<img alt="_images/c4b979124dee389b994bac874d48da238c9934967476c7712a6bf6b9927c9598.png" src="_images/c4b979124dee389b994bac874d48da238c9934967476c7712a6bf6b9927c9598.png" />
+</div>
+</div>
+<section id="id1">
+<h3><span class="section-number">6.2.1. </span>Ejercicios<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Escribe el código que calcule y grafique cada una de las siguientes sucesiones:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \alpha_n =1+\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \beta_n  = (-1)^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \gamma_n = \sin\Big(13+\frac{1}{n^2}\Big)\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \delta_n=\frac{1}{n^2}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \theta_n=\frac{n}{n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq15\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S_n=\frac{n+3}{n^3+4}\)</span>, con <span class="math notranslate nohighlight">\(n\leq25\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle R_n=\frac{n!}{n^n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle M_n=\frac{2n}{3n^2+2n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle Q_n=3n^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle W_n=\frac{3^n+(-1)^n}{3^{n+1}+(-1)^{n+1}}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+</ol>
+</section>
+</section>
+<section id="limite-de-una-sucesion">
+<h2><span class="section-number">6.3. </span>Límite de una sucesión<a class="headerlink" href="#limite-de-una-sucesion" title="Link to this heading">#</a></h2>
+<p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> converge hacia el número <span class="math notranslate nohighlight">\(L\)</span>, y escribimos:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-55a3b6f0-3788-4202-a334-6eb2aefbc543">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-55a3b6f0-3788-4202-a334-6eb2aefbc543" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle \lim_{n \to \infty}{S_n}=L
+\end{equation}\]</div>
+<p>Si ocurre que para cualquier valor razonablemente pequeño <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> existe un número natural <span class="math notranslate nohighlight">\(N\)</span> tal que para todos los términos <span class="math notranslate nohighlight">\(S_n\)</span> que siguen (es decir, se cumple que <span class="math notranslate nohighlight">\(n&gt;N\)</span>) ocurre que</p>
+<div class="amsmath math notranslate nohighlight" id="equation-051e77e4-d294-468f-836d-f11293d841d6">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-051e77e4-d294-468f-836d-f11293d841d6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle |S_n-L|&lt;\epsilon
+\end{equation}\]</div>
+<p>##Práctica 3.1.</p>
+<p><strong>Objetivo:</strong> Que el estudiante identifique el concepto de límite mediante el cálculo de los términos de una sucesión y su gráfica. Que el estudiante reconozca y analice la definición de límite de una sucesión de Cauchy a através del cálculo del término <span class="math notranslate nohighlight">\(S_n\)</span> de la sucesión que cumple con la condición <span class="math notranslate nohighlight">\(|S_n-L|&lt;\epsilon\)</span> para cualquier valor de <span class="math notranslate nohighlight">\(\epsilon\)</span> pequeño.</p>
+<p><strong>Actividades.</strong></p>
+<ol class="arabic simple">
+<li><p>Obtén los primeros 15 términos de la sucesión</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight" id="equation-3a3f8d39-5c15-41cc-8f49-549322905860">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-3a3f8d39-5c15-41cc-8f49-549322905860" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle S_n= 1-\frac{1}{n}
+\end{equation}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Obtén de la suceción usando los puntos calculados. De acuerdo a la gráfica, ¿a qué valor se acercan los términos de la sucesión con el incremento de <span class="math notranslate nohighlight">\(n\)</span>?, es decir, ¿cuál dirías que es el límite <span class="math notranslate nohighlight">\(L\)</span> de la sucesión?</p></li>
+<li><p>Dado el valor de <span class="math notranslate nohighlight">\(\epsilon=1\times 10^{-2}\)</span>, calcula tantos términos de la sucesión <span class="math notranslate nohighlight">\(S_n\)</span> como necesites para encontrar el que cumpla que
+\begin{equation}
+\displaystyle |S_n-L|&lt;\epsilon
+\end{equation}</p></li>
+<li><p>Escribe un código que imprima únicamente el término <span class="math notranslate nohighlight">\(S_n\)</span> que cumple la condición anterior.</p></li>
+<li><p>Toma valores más pequeños de <span class="math notranslate nohighlight">\(\epsilon\)</span>, a saber, <span class="math notranslate nohighlight">\(1\times 10^{-3}\)</span>,  <span class="math notranslate nohighlight">\(1\times 10^{-4}\)</span> y <span class="math notranslate nohighlight">\(1\times 10^{-6}\)</span> y halla el término Sn que cumple la condición <span class="math notranslate nohighlight">\(|S_n-L|&lt;\epsilon\)</span> en cada caso.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="c1"># Actividad 1</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">Sucesion_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 2</span>
+<span class="n">n</span>  <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Sn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
+  <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">Sn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Sn</span><span class="p">)</span>
+
+<span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">Sn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 3</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-2</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">120</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El término </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> de la sucesión es </span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">, |</span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">L</span><span class="si">}</span><span class="s2">|=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 4</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-2</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">120</span><span class="p">):</span>
+  <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="o">&lt;</span> <span class="n">epsilon</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El término </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> de la sucesión es </span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">, |</span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">L</span><span class="si">}</span><span class="s2">|=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 5</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon1</span> <span class="o">=</span> <span class="mf">1e-3</span>
+<span class="n">epsilon2</span> <span class="o">=</span> <span class="mf">1e-4</span>
+<span class="n">epsilon3</span> <span class="o">=</span><span class="mf">1e-6</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000000000</span><span class="p">):</span>
+  <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="o">&lt;</span> <span class="n">epsilon3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El término </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> de la sucesión es </span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">, |</span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">L</span><span class="si">}</span><span class="s2">|=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="practica-3-2">
+<h2><span class="section-number">6.4. </span>Práctica 3.2<a class="headerlink" href="#practica-3-2" title="Link to this heading">#</a></h2>
+<p><strong>Actividades.</strong></p>
+<p>Para las siguientes sucesiones:</p>
+<p>a) <span class="math notranslate nohighlight">\(\displaystyle S_n =\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-687e8bb1-e391-4e09-8442-ccee1421e9b9">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-687e8bb1-e391-4e09-8442-ccee1421e9b9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle S_n= 1-\frac{1}{n}
+\end{equation}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Obtén la gráfica de dichos puntos. De acuerdo a la gráfica, ¿a qué valor se acercan los términos de la sucesión con el incremento de <span class="math notranslate nohighlight">\(n\)</span>?, es decir, ¿cuál dirías que es el límite <span class="math notranslate nohighlight">\(L\)</span> de la sucesión?.</p></li>
+<li><p>Dado el valor de <span class="math notranslate nohighlight">\(\epsilon=1\times 10^{-2}\)</span>, calcula tantos términos de la sucesión <span class="math notranslate nohighlight">\(S_n\)</span> como necesites para encontrar el que cumpla que
+\begin{equation}
+\displaystyle |S_n-L|&lt;\epsilon
+\end{equation}</p></li>
+<li><p>Escribe un código que imprima únicamente el término <span class="math notranslate nohighlight">\(S_n\)</span> que cumple la condición anterior.</p></li>
+<li><p>Toma valores más pequeños de <span class="math notranslate nohighlight">\(\epsilon\)</span>, a saber, <span class="math notranslate nohighlight">\(1\times 10^{-3}\)</span>,  <span class="math notranslate nohighlight">\(1\times 10^{-4}\)</span> y <span class="math notranslate nohighlight">\(1\times 10^{-6}\)</span> y halla el término Sn que cumple la condición <span class="math notranslate nohighlight">\(|S_n-L|&lt;\epsilon\)</span> en cada caso.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "oscarrepez/Practicas-Calculo-1",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tutorial-Avanzado.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Tutorial Avanzado</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4. Representación de Números Reales en Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.1. Convertir un número real en un número flotante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">4.2. Operaciones con flotantes.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python">4.3. Práctica 1.1. Uso de Números de Punto Flotante en Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-campo-de-los-numeros-reales">4.4. Propiedades de campo de los números reales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-2-los-numeros-flotantes-son-un-campo">4.5. Práctica 1.2. ¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numero-reales">4.6. Propiedades de orden de los número reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">4.7. Valor absoluto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">4.8. Valor absoluto de la diferencia de dos números reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-3-distancia-entre-dos-numeros-reales">4.9. Práctica 1.3. Distancia entre dos números reales.</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">5. Funciones en Python.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">5.1. 2. Iterar sobre una lista de números.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">5.2. 3. Ejecutar código repetidamente.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">5.3. 4. Iterar sobre una cadena de texto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">5.4. 5. Sumar números de una lista</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sucesiones">6. Sucesiones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.1. Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">6.2. Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2.1. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">6.3. Límite de una sucesión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">6.4. Práctica 3.2</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jiménez Díaz, Departamento de Matemáticas, Facultad de Química, Universidad Nacional Autónoma de México
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<img src="https://github.com/felipelewyee/Cuantica-I/blob/master/logo_unam.png?raw=true" alt="logo_UNAM", style="width: 5%">
+<img src="https://github.com/felipelewyee/Cuantica-I/blob/master/logoFacultadQuimica.jpg?raw=true" alt="logo_FQ", style="width: 5%">
+    <br>© D.R. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 2022<br>Universidad Nacional Autónoma de México<br>Facultad de Química<br>Prohibida la reproducción total o parcial por cualquier medio, sin la autorización escrita del titular de los derechos patrimoniales.<br>Hecho en México<br>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
