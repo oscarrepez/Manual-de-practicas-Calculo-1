@@ -8,5 +8,4 @@ project:
   jupyter: true 
 
 site:
-  template: article-theme
-
+  template: book-theme
