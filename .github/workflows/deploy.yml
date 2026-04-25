@@ -1,63 +1,39 @@
-name: Deploy MyST site
+name: deploy-book
 
 on:
+  # Se ejecuta al hacer push a la rama principal
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches:
+      - main
 
-env:
-  BASE_URL: /${{ github.event.repository.name }}
-
+# Permisos necesarios para escribir en GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  contents: write
 
 jobs:
-  build:
+  deploy-book:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
-          pip install mystmd jupyter
+          pip install jupyter-book
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Build static HTML
-        run: myst build --html
-
-      - name: Show build output
+      - name: Build the book
         run: |
-          pwd
-          ls
-          ls _build || true
-          ls _build/html || true
-          test -f _build/html/index.html && echo "index exists" || echo "index missing"
+          # Reemplaza "." por la carpeta donde esté tu libro si no está en la raíz
+          jupyter-book build .
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _build/html
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
