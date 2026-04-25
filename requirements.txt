@@ -1,6 +1,4 @@
-mystmd
-jupyter
-numpy
 matplotlib
+numpy
+scipy
 sympy
-pandas

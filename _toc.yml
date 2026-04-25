@@ -1,0 +1,14 @@
+format: jb-book
+root: intro
+parts:
+- caption: Python
+  numbered: true
+  chapters:
+  - file: Tutorial-Basico
+  - file: Tutorial-Avanzado
+  - file: Series
+- caption: Sistemas Sencillos
+  numbered: true
+  chapters:
+  - file: practica1_fixed2
+

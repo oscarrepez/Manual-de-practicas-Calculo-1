@@ -1,0 +1,43 @@
+# Book settings
+title: Practicas Cálculo 1
+author: Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jiménez Díaz, Departamento de Matemáticas, Facultad de Química, Universidad Nacional Autónoma de México
+html:
+  extra_footer : |
+      <div>
+      <img src="https://github.com/felipelewyee/Cuantica-I/blob/master/logo_unam.png?raw=true" alt="logo_UNAM", style="width: 5%">
+      <img src="https://github.com/felipelewyee/Cuantica-I/blob/master/logoFacultadQuimica.jpg?raw=true" alt="logo_FQ", style="width: 5%">
+          <br>© D.R. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 2022<br>Universidad Nacional Autónoma de México<br>Facultad de Química<br>Prohibida la reproducción total o parcial por cualquier medio, sin la autorización escrita del titular de los derechos patrimoniales.<br>Hecho en México<br>
+      </div>
+
+sphinx:
+  config:
+    html_show_copyright: false
+
+launch_buttons:
+  colab_url                 : https://colab.research.google.com
+  binderhub_url             : https://mybinder.org
+  thebe                     : true
+
+repository:
+  url                       : https://github.com/oscarrepez/Practicas-Calculo-1
+  branch                    : master
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+execute:
+  timeout: 100
+
+parse:
+  myst_enable_extensions:
+    - "amsmath"
+    - "colon_fence"
+    - "deflist"
+    - "dollarmath"
+    - "html_admonition"
+    - "html_image"
+    - "linkify"
+    - "replacements"
+    - "smartquotes"
+    - "substitution"
