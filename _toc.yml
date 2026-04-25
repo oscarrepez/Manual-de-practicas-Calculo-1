@@ -6,7 +6,6 @@ parts:
   chapters:
   - file: Tutorial-Basico
   - file: Tutorial-Avanzado
-  - file: Series
 - caption: Sistemas Sencillos
   numbered: true
   chapters:
